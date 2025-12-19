@@ -4,7 +4,7 @@ import java.time.*;
 @Entity
 public class PersonProfile{
     @Id
-    private long id;
+    private Long id;
     private String personType;
     private String referenceld;
     private String fullname;
@@ -65,5 +65,5 @@ public class PersonProfile{
     public void setCreatedAt(LocalDatetime createdAt){
         this.createdAt=createdAt;
     }
-    
+    public PersonProfile(Long id,string personType,)
 }
