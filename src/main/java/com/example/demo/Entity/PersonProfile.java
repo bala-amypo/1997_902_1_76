@@ -6,6 +6,10 @@ public class PersonProfile{
     @Id
     private long id;
     private String personType;
-    private Strinh 
+    private String referenceld;
+    private String fullname;
+    private String email;
+    private String department;
+    private Boolean 
     
 }
