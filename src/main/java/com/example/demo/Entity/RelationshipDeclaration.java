@@ -31,29 +31,11 @@ public class RelationshipDeclaration{
         this.relatedPersonName=relatedPersonName;
     }
 
-    public String getRelationshipType(){
-        return relationshipType;
+    public String getDescription(){
+        return description;
     }
-    public void setRelationshipType(String personType){
-        this.relationshipType=relationshipType;
-    }
-    public String getReferenceId(){
-        return referenceId;
-    }
-    public void setReferenceId(){
-        this.referenceId=referenceId;
-    }
-    public String getFullName(){
-        return fullname;
-    }
-    public void setFullName(String fullname){
-        this.fullname=fullname;
-    }
-    public String getEmail(){
-        return email;
-    }
-    public void setEmail(String Email){
-        this.email=email;
+    public void setDescription(String description){
+        this.description=description;
     }
     public Boolean getCreatedAt(){
         return createdAt;
@@ -64,17 +46,19 @@ public class RelationshipDeclaration{
     public void setDepartment(String Department){
         this.department=department;
     }
+    public LocalDatetime getCreatedAt(){
+        return createdAt;
+    }
+    public void setCreatedAt(LocalDatetime createdAt){
+        this.createdAt=createdAt;
+    }
     public Boolean getRelationshipDeclared(){
         return relationshipDeclared;
     }
     public void setRelationshipDeclared(Boolean relationshipDeclared){
         this.relationshipDeclared=relationshipDeclared;
     }
-    public LocalDatetime getCreatedAt(){
-        return createdAt;
-    }
-    public void setCreatedAt(LocalDatetime createdAt){
-        this.createdAt=createdAt;
+   
     }
     public PersonProfile(Long id,String personType,String referenceId,String fullName,String email,String department,Boolean relationshipDeclared,LocateDatetime createdAt){
         this.id=id;
