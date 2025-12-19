@@ -8,24 +8,20 @@ public class RelationshipDeclaration{
     private Long personId;
     private String relatedPersonName;
     private String relationshipType;
-    private String referenceld;
-    private String fullname;
-    private String email;
-    private String department;
-    private Boolean relationshipDeclared;
-    private LocalDatetime createdAt;
+    private String description;
+    private LocalDatetime declaredAt;
+    private Boolean isVerified;
    
-
-    public long getId(){
+    public Long getId(){
         return id;
     }
     public void setId(Long id){
         this.id=id;
     }
-    public String getPersonType(){
-        return personType;
+    public String getRelationshipType(){
+        return relationshipType;
     }
-    public void setPersonType(String personType){
+    public void setRelationshipType(String personType){
         this.personId=personId;
     }
     public String getReferenceId(){
