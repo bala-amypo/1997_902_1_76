@@ -44,5 +44,11 @@ public class PersonProfile{
     public void setEmail(String Email){
         this.email=email;
     }
-    public Boolean getCreatedAt
+    public Boolean getCreatedAt(){
+        return createdAt;
+    }
+    public String getDepartment(){
+        return department;
+    }
+    public void 
 }
