@@ -57,7 +57,9 @@ public class RelationshipDeclaration{
         this.personId=personId;
         this.relatedPersonName=relatedPersonName;
         this.relationshipType=relationshipType;
-        this.
+        this.description=description;
+        this.declaredAt=declaredAt;
+        this.isVerified=isVerified;
         
     }
     public RelationshipDeclaration(){
