@@ -32,10 +32,10 @@ public class PersonProfile{
     public void setReferenceId(){
         this.referenceId=referenceId;
     }
-    public String getFullname(){
+    public String getFullName(){
         return fullname;
     }
-    public void setFullname(String fullname){
+    public void setFullName(String fullname){
         this.fullname=fullname;
     }
     public String getEmail(){
@@ -53,7 +53,7 @@ public class PersonProfile{
     public void setDepartment(String Department){
         this.department=department;
     }
-    public Boolean getrelationshipDeclared(){
+    public Boolean getRelationshipDeclared(){
         return relationshipDeclared;
     }
     public void setRelationshipDeclared(Boolean relationshipDeclared){
@@ -63,6 +63,7 @@ public class PersonProfile{
         return createdAt;
     }
     public void setCreatedAt(LocalDatetime createdAt){
-        this.
+        this.createdAt=createdAt;
     }
+    
 }
