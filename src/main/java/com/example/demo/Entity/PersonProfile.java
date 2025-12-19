@@ -56,5 +56,7 @@ public class PersonProfile{
     public Boolean getrelationshipDeclared(){
         return relationshipDeclared;
     }
-    public void 
+    public void setrelationshipDeclared(){
+        
+    }
 }
