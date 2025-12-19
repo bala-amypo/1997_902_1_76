@@ -67,6 +67,12 @@ public class PersonProfile{
     }
     public PersonProfile(Long id,String personType,String referenceId,String fullName,String email,String department,Boolean relationshipDeclared,LocateDatetime createdAt){
         this.id=id;
-        this.personType
+        this.personType=personType;
+        this.referenceId=referenceId;
+        this.fullName=fullName;
+        this.email=email;
+        this.department=department;
+        this.relationshipDeclared=relationshipDeclared;
+        this.isVerified
     }
 }
