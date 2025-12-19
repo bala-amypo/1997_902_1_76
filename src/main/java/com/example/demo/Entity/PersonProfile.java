@@ -56,13 +56,13 @@ public class PersonProfile{
     public Boolean getrelationshipDeclared(){
         return relationshipDeclared;
     }
-    public void setrelationshipDeclared(Boolean relationshipDeclared){
+    public void setRelationshipDeclared(Boolean relationshipDeclared){
         this.relationshipDeclared=relationshipDeclared;
     }
-    public LocalDatetime getcreatedAt(){
+    public LocalDatetime getCreatedAt(){
         return createdAt;
     }
-    public void setcreatedAt(LocalDatetime createdAt){
-
+    public void setCreatedAt(LocalDatetime createdAt){
+        this.
     }
 }
