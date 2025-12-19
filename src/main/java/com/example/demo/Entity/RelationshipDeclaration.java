@@ -1,12 +1,13 @@
-
 package com.example.demo.Entity;
 import jakarta.persistence.*;
 import java.time.*;
 @Entity
-public class PersonProfile{
+public class RelationshipDeclaration{
     @Id
     private Long id;
-    private String personType;
+    private Long personId;
+    private String relatedPersonName;
+    private String relationshipType;
     private String referenceld;
     private String fullname;
     private String email;
