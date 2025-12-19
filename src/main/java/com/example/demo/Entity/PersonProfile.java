@@ -65,5 +65,8 @@ public class PersonProfile{
     public void setCreatedAt(LocalDatetime createdAt){
         this.createdAt=createdAt;
     }
-    public PersonProfile(Long id,string personType,)
+    public PersonProfile(Long id,String personType,String referenceId,String fullName,String email,String department,Boolean relationshipDeclared,LocateDatetime createdAt){
+        this.id=id;
+        this.personType
+    }
 }
