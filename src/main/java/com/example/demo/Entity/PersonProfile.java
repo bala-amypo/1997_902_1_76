@@ -54,6 +54,7 @@ public class PersonProfile{
         this.department=department;
     }
     public Boolean getrelationshipDeclared(){
-        return relationshipDeclared
+        return relationshipDeclared;
     }
+    public void 
 }
