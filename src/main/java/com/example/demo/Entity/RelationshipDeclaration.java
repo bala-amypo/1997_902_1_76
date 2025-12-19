@@ -18,11 +18,18 @@ public class RelationshipDeclaration{
     public void setId(Long id){
         this.id=id;
     }
+    public Long getPersonId(){
+        return Personid;
+    }
+    public void setPersonId(Long personId){
+        this.personId=personId;
+    }
+    public
     public String getRelationshipType(){
         return relationshipType;
     }
     public void setRelationshipType(String personType){
-        this.personId=personId;
+        this.relationshipType=relationshipType;
     }
     public String getReferenceId(){
         return referenceId;
