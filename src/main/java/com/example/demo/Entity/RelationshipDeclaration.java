@@ -40,12 +40,17 @@ public class RelationshipDeclaration{
     public LocalDateTime getDeclaredAt(){
         return declaredAt;
     }
-    public void setDeclaredAt(LocalDateTime){
+    public void setDeclaredAt(LocalDateTime declaredAt){
         this.declaredAt=declaredAt;
     }
-    public 
+    public Boolean getIsVerified(){
+        return isVerified;
     }
-    public PersonProfile(Long id,String personType,String referenceId,String fullName,String email,String department,Boolean relationshipDeclared,LocateDatetime createdAt){
+    public void setIsVerified(Boolean isVerified){
+        this.isVerified=isVerified;
+    }
+    }
+    public PersonProfile(Long id,Long personId,String referenceId,String fullName,String email,String department,Boolean relationshipDeclared,LocateDatetime createdAt){
         this.id=id;
         this.personType=personType;
         this.referenceId=referenceId;
