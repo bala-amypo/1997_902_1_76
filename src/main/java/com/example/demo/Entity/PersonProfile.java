@@ -73,6 +73,9 @@ public class PersonProfile{
         this.email=email;
         this.department=department;
         this.relationshipDeclared=relationshipDeclared;
-        this.isVerified
+        this.isVerified=isVerified;
+    }
+    public PersonProfile(){
+
     }
 }
