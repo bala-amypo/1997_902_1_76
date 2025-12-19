@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.demo.Entity;
 public class VendorEngagement{
     
 }
