@@ -36,6 +36,13 @@ public class PersonProfile{
         return fullname;
     }
     public void setFullname(String fullname){
-        this.fullname=fullname
+        this.fullname=fullname;
     }
+    public String getEmail(){
+        return email;
+    }
+    public void setEmail(String Email){
+        this.email=email;
+    }
+    
 }
