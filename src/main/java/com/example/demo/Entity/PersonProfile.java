@@ -11,7 +11,7 @@ public class PersonProfile{
     private String email;
     private String department;
     private Boolean relationshipeDeclared;
-    private LocalDatetime declaredAt;
+    private LocalDatetime createdAt;
    
 
     public long getId(){
@@ -44,5 +44,5 @@ public class PersonProfile{
     public void setEmail(String Email){
         this.email=email;
     }
-    public Boolean get
+    public Boolean getCreatedAt
 }
