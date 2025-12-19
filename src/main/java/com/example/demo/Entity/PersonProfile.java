@@ -26,5 +26,14 @@ public class PersonProfile{
     public void setPersonType(String personType){
         this.personId=personId;
     }
-    public 
+    public String getReferenceId(){
+        return referenceId;
+    }
+    public void setReferenceId(){
+        this.referenceId=referenceId;
+    }
+    public String fullname(){
+        return fullname;
+    }
+    public void set
 }
