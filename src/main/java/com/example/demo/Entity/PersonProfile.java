@@ -10,6 +10,8 @@ public class PersonProfile{
     private String fullname;
     private String email;
     private String department;
-    private Boolean 
+    private Boolean relationshipeDeclared;
+    private LocalDatetime declaredAt;
+    private Boolean isVerified;
     
 }
