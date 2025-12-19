@@ -10,7 +10,7 @@ public class PersonProfile{
     private String fullname;
     private String email;
     private String department;
-    private Boolean relationshipeDeclared;
+    private Boolean relationshipDeclared;
     private LocalDatetime createdAt;
    
 
@@ -50,5 +50,10 @@ public class PersonProfile{
     public String getDepartment(){
         return department;
     }
-    public void 
+    public void setDepartment(String Department){
+        this.department=department;
+    }
+    public Boolean getrelationshipDeclared(){
+        return relationshipDeclared
+    }
 }
