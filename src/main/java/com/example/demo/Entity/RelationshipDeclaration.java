@@ -37,28 +37,7 @@ public class RelationshipDeclaration{
     public void setDescription(String description){
         this.description=description;
     }
-    public Boolean getCreatedAt(){
-        return createdAt;
-    }
-    public String getDepartment(){
-        return department;
-    }
-    public void setDepartment(String Department){
-        this.department=department;
-    }
-    public LocalDatetime getCreatedAt(){
-        return createdAt;
-    }
-    public void setCreatedAt(LocalDatetime createdAt){
-        this.createdAt=createdAt;
-    }
-    public Boolean getRelationshipDeclared(){
-        return relationshipDeclared;
-    }
-    public void setRelationshipDeclared(Boolean relationshipDeclared){
-        this.relationshipDeclared=relationshipDeclared;
-    }
-   
+    public 
     }
     public PersonProfile(Long id,String personType,String referenceId,String fullName,String email,String department,Boolean relationshipDeclared,LocateDatetime createdAt){
         this.id=id;
