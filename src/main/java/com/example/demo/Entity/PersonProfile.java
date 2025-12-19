@@ -20,5 +20,11 @@ public class PersonProfile{
     public void setId(Long id){
         this.id=id;
     }
-    public String get
+    public String getPersonType(){
+        return personType;
+    }
+    public void setPersonType(String personType){
+        this.personId=personId;
+    }
+    public 
 }
