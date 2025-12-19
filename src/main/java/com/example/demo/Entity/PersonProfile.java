@@ -32,7 +32,7 @@ public class PersonProfile{
     public void setReferenceId(){
         this.referenceId=referenceId;
     }
-    public String fullname(){
+    public String getfullname(){
         return fullname;
     }
     public void set
