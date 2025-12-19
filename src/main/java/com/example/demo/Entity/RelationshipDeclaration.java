@@ -9,7 +9,7 @@ public class RelationshipDeclaration{
     private String relatedPersonName;
     private String relationshipType;
     private String description;
-    private LocalDatetime declaredAt;
+    private LocalDateTime declaredAt;
     private Boolean isVerified;
    
     public Long getId(){
@@ -36,6 +36,12 @@ public class RelationshipDeclaration{
     }
     public void setDescription(String description){
         this.description=description;
+    }
+    public LocalDateTime getDeclaredAt(){
+        return declaredAt;
+    }
+    public void setDeclaredAt(LocalDateTime){
+        this.declaredAt=declaredAt;
     }
     public 
     }
