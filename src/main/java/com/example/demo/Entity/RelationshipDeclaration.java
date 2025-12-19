@@ -50,17 +50,17 @@ public class RelationshipDeclaration{
         this.isVerified=isVerified;
     }
     }
-    public PersonProfile(Long id,Long personId,String referenceId,String fullName,String email,String department,Boolean relationshipDeclared,LocateDatetime createdAt){
+    public PersonProfile(Long id,Long personId,String relatedPersonName,String relationshipType,String description, LocaldateTime declaredAt, Boolean isVerified){
+
+    
         this.id=id;
-        this.personType=personType;
-        this.referenceId=referenceId;
-        this.fullName=fullName;
-        this.email=email;
-        this.department=department;
-        this.relationshipDeclared=relationshipDeclared;
-        this.isVerified=isVerified;
+        this.personId=personId;
+        this.relatedPersonName=relatedPersonName;
+        this.relationshipType=relationshipType;
+        this.
+        
     }
-    public PersonProfile(){
+    public RelationshipDeclaration(){
 
     }
 }
