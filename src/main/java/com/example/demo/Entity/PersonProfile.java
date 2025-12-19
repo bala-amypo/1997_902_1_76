@@ -56,7 +56,11 @@ public class PersonProfile{
     public Boolean getrelationshipDeclared(){
         return relationshipDeclared;
     }
-    public void setrelationshipDeclared(Boolean relationship){
+    public void setrelationshipDeclared(Boolean relationshipDeclared){
         return relationshipDeclared;
     }
+    public LocalDatetime getcreatedAt(){
+        return createdAt;
+    }
+    public void setcreatedAt
 }
