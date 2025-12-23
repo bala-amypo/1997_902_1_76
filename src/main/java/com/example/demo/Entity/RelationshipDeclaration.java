@@ -11,7 +11,7 @@ public class RelationshipDeclaration{
     private String description;
     private LocalDateTime declaredAt;
     private Boolean isVerified;
-   
+
     public Long getId(){
         return id;
     }
