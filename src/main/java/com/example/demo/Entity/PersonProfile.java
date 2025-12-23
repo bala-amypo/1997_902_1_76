@@ -14,7 +14,9 @@ public class PersonProfile {
     private String email;
     private LocalDateTime createdAt;
 
-    public PersonProfile() {}
+    public PersonProfile() {
+        this.createdAt = LocalDateTime.now();
+    }
 
     public PersonProfile(String fullName, String email) {
         this.fullName = fullName;
