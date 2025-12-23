@@ -1,4 +1,4 @@
-package com.example.demo.Service.Implement;
+package com.example.demo.service.impl;
 
 import com.example.demo.model.VendorEngagementRecord;
 import com.example.demo.repository.VendorEngagementRecordRepository;
@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class VendorEngagementServiceImplement {
+public class VendorEngagementServiceImpl {
 
     private final VendorEngagementRecordRepository repository;
 
-    public VendorEngagementServiceImplement(VendorEngagementRecordRepository repository) {
+    public VendorEngagementServiceImpl(VendorEngagementRecordRepository repository) {
         this.repository = repository;
     }
 

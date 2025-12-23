@@ -1,4 +1,4 @@
-package com.example.demo.Service.Implement;
+package com.example.demo.service.impl;
 
 import com.example.demo.exception.ApiException;
 import com.example.demo.model.ConflictFlag;
@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ConflictFlagServiceImplement {
+public class ConflictFlagServiceImpl {
 
     private final ConflictFlagRepository repository;
 
-    public ConflictFlagServiceImplement(ConflictFlagRepository repository) {
+    public ConflictFlagServiceImpl(ConflictFlagRepository repository) {
         this.repository = repository;
     }
 
