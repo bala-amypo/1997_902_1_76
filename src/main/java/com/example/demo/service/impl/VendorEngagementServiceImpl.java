@@ -1,7 +1,7 @@
 package com.example.demo.service.impl;
 
 import com.example.demo.model.VendorEngagementRecord;
-import com.example.demo.repository.VendorEngagementRepository;
+import com.example.demo.repository.VendorEngagementRecordRepository;
 import com.example.demo.service.VendorEngagementService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ import java.util.List;
 public class VendorEngagementServiceImpl implements VendorEngagementService {
 
     @Autowired
-    private VendorEngagementRepository repository;
+    private VendorEngagementRecordRepository repository;
 
     @Override
     public VendorEngagementRecord addEngagement(VendorEngagementRecord record) {
