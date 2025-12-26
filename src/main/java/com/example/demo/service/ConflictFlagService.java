@@ -5,7 +5,8 @@ import java.util.List;
 
 public interface ConflictFlagService {
 
-    ConflictFlag createFlag(ConflictFlag flag);
+    // Use 'addFlag' to match the controller
+    ConflictFlag addFlag(ConflictFlag flag);
 
     List<ConflictFlag> getFlagsByCase(Long caseId);
 
