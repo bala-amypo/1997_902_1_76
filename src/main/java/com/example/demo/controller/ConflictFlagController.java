@@ -24,8 +24,7 @@ public class ConflictFlagController {
     }
 
     @GetMapping("/case/{caseId}")
-    public List<ConflictFlag> getFlagsByCase(
-            @PathVariable Long caseId) {
+    public List<ConflictFlag> getFlagsByCase(@PathVariable Long caseId) {
         return service.getFlagsByCase(caseId);
     }
 
