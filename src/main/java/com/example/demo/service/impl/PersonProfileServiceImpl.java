@@ -1,9 +1,9 @@
 package com.example.demo.service.impl;
 
+import com.example.demo.exception.ApiException;
 import com.example.demo.model.PersonProfile;
 import com.example.demo.repository.PersonProfileRepository;
 import com.example.demo.service.PersonProfileService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,26 +11,38 @@ import java.util.List;
 @Service
 public class PersonProfileServiceImpl implements PersonProfileService {
 
-    @Autowired
-    private PersonProfileRepository repository;
+    private final PersonProfileRepository repository;
+
+    public PersonProfileServiceImpl(PersonProfileRepository repository) {
+        this.repository = repository;
+    }
 
     @Override
-    public PersonProfile createProfile(PersonProfile person) {
+    public PersonProfile createPerson(PersonProfile person) {
         return repository.save(person);
     }
 
     @Override
-    public PersonProfile findById(Long id) {
-        return repository.findById(id).orElse(null);
+    public PersonProfile getPersonById(Long id) {
+        return repository.findById(id)
+                .orElseThrow(() -> new ApiException("Person not found"));
     }
 
     @Override
-    public PersonProfile findByReferenceId(String referenceId) {
-        return repository.findByReferenceId(referenceId);
-    }
-
-    @Override
-    public List<PersonProfile> getAllProfiles() {
+    public List<PersonProfile> getAllPersons() {
         return repository.findAll();
+    }
+
+    @Override
+    public PersonProfile updateRelationshipDeclared(Long id, boolean declared) {
+        PersonProfile person = getPersonById(id);
+        person.setRelationshipDeclared(declared);
+        return repository.save(person);
+    }
+
+    @Override
+    public PersonProfile getByReferenceId(String refId) {
+        return repository.findByReferenceId(refId)
+                .orElseThrow(() -> new ApiException("Person not found"));
     }
 }
