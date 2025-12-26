@@ -40,8 +40,9 @@ public class PersonProfileServiceImpl implements PersonProfileService {
         return repository.save(person);
     }
 
+    // ✅ This name MUST match the interface
     @Override
-    public PersonProfile getByReferenceId(String refId) {
+    public PersonProfile findByReferenceId(String refId) {
         return repository.findByReferenceId(refId)
                 .orElseThrow(() -> new ApiException("Person not found"));
     }
