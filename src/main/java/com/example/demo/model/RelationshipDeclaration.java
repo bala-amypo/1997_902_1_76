@@ -15,18 +15,24 @@ public class RelationshipDeclaration {
     private String relationshipType;
     private String description;
     private LocalDateTime declaredAt;
-    private Boolean isVerified;
 
-    public RelationshipDeclaration() {}
+    private boolean verified;
 
-    public RelationshipDeclaration(Long personId, String relatedPersonName,
-                                   String relationshipType, String description) {
+    public RelationshipDeclaration() {
+        this.declaredAt = LocalDateTime.now();
+        this.verified = false;
+    }
+
+    public RelationshipDeclaration(Long personId,
+         String relatedPersonName,
+      String relationshipType,
+       String description) {
         this.personId = personId;
         this.relatedPersonName = relatedPersonName;
         this.relationshipType = relationshipType;
         this.description = description;
         this.declaredAt = LocalDateTime.now();
-        this.isVerified = false;
+        this.verified = false;
     }
 
     public Long getId() {
@@ -53,17 +59,11 @@ public class RelationshipDeclaration {
         return declaredAt;
     }
 
-    public Boolean getIsVerified() {
-        return isVerified;
-    }
-    private boolean isVerified;
-
     public boolean isVerified() {
-        return isVerified;
+        return verified;
     }
 
-    public void setIsVerified(boolean isVerified) {
-        this.isVerified = isVerified;
+    public void setVerified(boolean verified) {
+        this.verified = verified;
     }
-
 }
