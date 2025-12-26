@@ -4,8 +4,8 @@ import com.example.demo.model.ConflictFlag;
 import com.example.demo.repository.ConflictFlagRepository;
 import com.example.demo.service.ConflictFlagService;
 
-import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ public class ConflictFlagServiceImpl implements ConflictFlagService {
     private ConflictFlagRepository repository;
 
     @Override
-    public ConflictFlag addFlag(ConflictFlag flag) {
+    public ConflictFlag createFlag(ConflictFlag flag) {
         return repository.save(flag);
     }
 

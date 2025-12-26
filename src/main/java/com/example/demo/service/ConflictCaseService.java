@@ -10,4 +10,8 @@ public interface ConflictCaseService {
     ConflictCase getCaseById(Long id);
 
     List<ConflictCase> getAllCases();
+
+    ConflictCase updateCaseStatus(Long id, String status);
+
+    List<ConflictCase> getCasesByPerson(Long personId);
 }
