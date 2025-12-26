@@ -1,11 +1,15 @@
 package com.example.demo.service;
 
-import com.example.demo.model.ConflictCase;
+import com.example.demo.model.ConflictFlag;
 import java.util.List;
 
-public interface ConflictCaseService {
+public interface ConflictFlagService {
 
-    ConflictCase create(ConflictCase conflictCase);
+    ConflictFlag addFlag(ConflictFlag flag);
 
-    List<ConflictCase> findByPrimaryOrSecondary(Long id1, Long id2);
+    List<ConflictFlag> getFlagsByCase(Long caseId);
+
+    ConflictFlag getFlagById(Long id);
+
+    List<ConflictFlag> getAllFlags();
 }

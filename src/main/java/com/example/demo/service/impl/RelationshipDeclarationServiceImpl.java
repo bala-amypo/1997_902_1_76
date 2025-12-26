@@ -1,11 +1,24 @@
+package com.example.demo.service.impl;
+
+import com.example.demo.model.RelationshipDeclaration;
+import com.example.demo.repository.RelationshipDeclarationRepository;
+import com.example.demo.service.RelationshipDeclarationService;
+
+import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
+
 @Service
-public class RelationshipDeclarationServiceImpl implements RelationshipDeclarationService {
+public class RelationshipDeclarationServiceImpl
+        implements RelationshipDeclarationService {
 
     @Autowired
     private RelationshipDeclarationRepository repository;
 
     @Override
-    public RelationshipDeclaration declareRelationship(RelationshipDeclaration declaration) {
+    public RelationshipDeclaration declareRelationship(
+            RelationshipDeclaration declaration) {
         return repository.save(declaration);
     }
 
@@ -18,7 +31,7 @@ public class RelationshipDeclarationServiceImpl implements RelationshipDeclarati
     public RelationshipDeclaration verifyDeclaration(Long id, boolean verified) {
         RelationshipDeclaration declaration =
                 repository.findById(id).orElseThrow();
-        declaration.setIsVerified(verified);
+        declaration.setVerified(verified);
         return repository.save(declaration);
     }
 
