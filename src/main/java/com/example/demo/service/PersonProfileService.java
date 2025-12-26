@@ -1,15 +1,9 @@
-package com.example.demo.service;
+private boolean relationshipDeclared;
 
-import com.example.demo.model.PersonProfile;
-import java.util.List;
+public boolean isRelationshipDeclared() {
+    return relationshipDeclared;
+}
 
-public interface PersonProfileService {
-
-    PersonProfile createProfile(PersonProfile person);
-
-    PersonProfile findById(Long id);
-
-    PersonProfile findByReferenceId(String referenceId);
-
-    List<PersonProfile> getAllProfiles();
+public void setRelationshipDeclared(boolean relationshipDeclared) {
+    this.relationshipDeclared = relationshipDeclared;
 }
