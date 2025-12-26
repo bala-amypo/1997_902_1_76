@@ -56,13 +56,14 @@ public class RelationshipDeclaration {
     public Boolean getIsVerified() {
         return isVerified;
     }
-}
-private boolean isVerified;
+    private boolean isVerified;
 
-public boolean isVerified() {
-    return isVerified;
-}
+    public boolean isVerified() {
+        return isVerified;
+    }
 
-public void setIsVerified(boolean isVerified) {
-    this.isVerified = isVerified;
+    public void setIsVerified(boolean isVerified) {
+        this.isVerified = isVerified;
+    }
+
 }
