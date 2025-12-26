@@ -1,10 +1,9 @@
-public interface PersonProfileService {
+private boolean relationshipDeclared;
 
-    PersonProfile createProfile(PersonProfile person);
+public boolean isRelationshipDeclared() {
+    return relationshipDeclared;
+}
 
-    PersonProfile findById(Long id);
-
-    PersonProfile findByReferenceId(String referenceId);
-
-    List<PersonProfile> getAllProfiles();
+public void setRelationshipDeclared(boolean relationshipDeclared) {
+    this.relationshipDeclared = relationshipDeclared;
 }
