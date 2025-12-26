@@ -13,10 +13,8 @@ public class PersonProfile {
     private String fullName;
     private String email;
     private LocalDateTime createdAt;
-    private boolean relationshipDeclared; 
-    public boolean isRelationshipDeclared() { 
-    return relationshipDeclared; 
-    }
+
+    private boolean relationshipDeclared;
 
     public PersonProfile() {
         this.createdAt = LocalDateTime.now();
@@ -50,5 +48,13 @@ public class PersonProfile {
 
     public LocalDateTime getCreatedAt() {
         return createdAt;
+    }
+
+    public boolean isRelationshipDeclared() {
+        return relationshipDeclared;
+    }
+
+    public void setRelationshipDeclared(boolean relationshipDeclared) {
+        this.relationshipDeclared = relationshipDeclared;
     }
 }
