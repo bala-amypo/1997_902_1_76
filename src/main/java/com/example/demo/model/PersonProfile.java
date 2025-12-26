@@ -13,6 +13,10 @@ public class PersonProfile {
     private String fullName;
     private String email;
     private LocalDateTime createdAt;
+    private boolean relationshipDeclared; 
+    public boolean isRelationshipDeclared() { 
+    return relationshipDeclared; 
+    }
 
     public PersonProfile() {
         this.createdAt = LocalDateTime.now();
