@@ -5,12 +5,13 @@ import java.util.List;
 
 public interface ConflictFlagService {
 
-    // Use 'addFlag' to match the controller
-    ConflictFlag addFlag(ConflictFlag flag);
+    ConflictFlag createFlag(ConflictFlag conflictFlag);
 
-    List<ConflictFlag> getFlagsByCase(Long caseId);
+    ConflictFlag updateFlagStatus(Long id, String status);
 
     ConflictFlag getFlagById(Long id);
+
+    List<ConflictFlag> getFlagsByCaseId(Long caseId);
 
     List<ConflictFlag> getAllFlags();
 }

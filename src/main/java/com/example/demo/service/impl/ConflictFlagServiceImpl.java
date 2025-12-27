@@ -1,47 +1,47 @@
 package com.example.demo.service.impl;
 
-import com.example.demo.model.ConflictCase;
-import com.example.demo.repository.ConflictCaseRepository;
-import com.example.demo.service.ConflictCaseService;
+import com.example.demo.model.ConflictFlag;
+import com.example.demo.repository.ConflictFlagRepository;
+import com.example.demo.service.ConflictFlagService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class ConflictFlagServiceImpl implements ConflictCaseService {
+public class ConflictFlagServiceImpl implements ConflictFlagService {
 
-    private final ConflictCaseRepository repository;
+    private final ConflictFlagRepository repository;
 
-    public ConflictFlagServiceImpl(ConflictCaseRepository repository) {
+    public ConflictFlagServiceImpl(ConflictFlagRepository repository) {
         this.repository = repository;
     }
 
     @Override
-    public ConflictCase createCase(ConflictCase conflictCase) {
-        return repository.save(conflictCase);
+    public ConflictFlag createFlag(ConflictFlag conflictFlag) {
+        return repository.save(conflictFlag);
     }
 
     @Override
-    public ConflictCase updateCaseStatus(Long id, String status) {
-        ConflictCase conflictCase = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Case not found"));
-        conflictCase.setStatus(status);
-        return repository.save(conflictCase);
+    public ConflictFlag updateFlagStatus(Long id, String status) {
+        ConflictFlag flag = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Flag not found"));
+        flag.setStatus(status);
+        return repository.save(flag);
     }
 
     @Override
-    public List<ConflictCase> getCasesByPerson(Long personId) {
-        return repository.findByPersonId(personId);
-    }
-
-    @Override
-    public ConflictCase getCaseById(Long id) {
+    public ConflictFlag getFlagById(Long id) {
         return repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Case not found"));
+                .orElseThrow(() -> new RuntimeException("Flag not found"));
     }
 
     @Override
-    public List<ConflictCase> getAllCases() {
+    public List<ConflictFlag> getFlagsByCaseId(Long caseId) {
+        return repository.findByCaseId(caseId);
+    }
+
+    @Override
+    public List<ConflictFlag> getAllFlags() {
         return repository.findAll();
     }
 }
