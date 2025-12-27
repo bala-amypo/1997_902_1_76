@@ -1,8 +1,6 @@
 package com.example.demo.model;
 
-
 import jakarta.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
 public class ConflictFlag {
@@ -15,21 +13,10 @@ public class ConflictFlag {
 
     private String flagType;
 
-    private String description;
-
-    private String severity;
-
-    private LocalDateTime flaggedAt = LocalDateTime.now();
-
-    public ConflictFlag() {
-    }
+    private String status;
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public Long getCaseId() {
@@ -48,27 +35,11 @@ public class ConflictFlag {
         this.flagType = flagType;
     }
 
-    public String getDescription() {
-        return description;
+    public String getStatus() {
+        return status;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getSeverity() {
-        return severity;
-    }
-
-    public void setSeverity(String severity) {
-        this.severity = severity;
-    }
-
-    public LocalDateTime getFlaggedAt() {
-        return flaggedAt;
-    }
-
-    public void setFlaggedAt(LocalDateTime flaggedAt) {
-        this.flaggedAt = flaggedAt;
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
