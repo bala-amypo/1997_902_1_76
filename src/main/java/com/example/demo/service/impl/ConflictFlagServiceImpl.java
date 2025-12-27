@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service  // 🔥 VERY IMPORTANT
-public class ConflictCaseServiceImpl implements ConflictCaseService {
+public class ConflictCaseServiceImpl implements{
 
     private final ConflictCaseRepository repository;
 
