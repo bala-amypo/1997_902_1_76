@@ -19,18 +19,25 @@ public class ConflictFlagController {
     }
 
     @PostMapping
-    public ConflictFlag addFlag(@RequestBody ConflictFlag flag) {
-        return service.addFlag(flag);
+    public ConflictFlag createFlag(@RequestBody ConflictFlag conflictFlag) {
+        return service.createFlag(conflictFlag);   // ✅ FIXED
     }
 
     @GetMapping("/case/{caseId}")
-    public List<ConflictFlag> getFlagsByCase(@PathVariable Long caseId) {
-        return service.getFlagsByCase(caseId);
+    public List<ConflictFlag> getFlagsByCaseId(@PathVariable Long caseId) {
+        return service.getFlagsByCaseId(caseId);   // ✅ FIXED
     }
 
     @GetMapping("/{id}")
     public ConflictFlag getFlagById(@PathVariable Long id) {
         return service.getFlagById(id);
+    }
+
+    @PutMapping("/{id}/status")
+    public ConflictFlag updateStatus(
+            @PathVariable Long id,
+            @RequestParam String status) {
+        return service.updateFlagStatus(id, status);
     }
 
     @GetMapping
