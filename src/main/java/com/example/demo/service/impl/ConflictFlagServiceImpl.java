@@ -1,39 +1,34 @@
 package com.example.demo.service.impl;
 
-import com.example.demo.model.ConflictFlag;
-import com.example.demo.repository.ConflictFlagRepository;
-import com.example.demo.service.ConflictFlagService;
+import com.example.demo.model.ConflictCase;
+import com.example.demo.repository.ConflictCaseRepository;
+import com.example.demo.service.ConflictCaseService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class ConflictFlagServiceImpl implements ConflictFlagService {
+@Service  // 🔥 VERY IMPORTANT
+public class ConflictCaseServiceImpl implements ConflictCaseService {
 
-    private final ConflictFlagRepository repository;
+    private final ConflictCaseRepository repository;
 
-    // Constructor injection (recommended over @Autowired)
-    public ConflictFlagServiceImpl(ConflictFlagRepository repository) {
+    public ConflictCaseServiceImpl(ConflictCaseRepository repository) {
         this.repository = repository;
     }
 
     @Override
-    public ConflictFlag addFlag(ConflictFlag flag) {
-        return repository.save(flag);
+    public ConflictCase createCase(ConflictCase conflictCase) {
+        return repository.save(conflictCase);
     }
 
     @Override
-    public List<ConflictFlag> getFlagsByCase(Long caseId) {
-        return repository.findByCaseId(caseId);
-    }
-
-    @Override
-    public ConflictFlag getFlagById(Long id) {
-        return repository.findById(id).orElse(null);
-    }
-
-    @Override
-    public List<ConflictFlag> getAllFlags() {
+    public List<ConflictCase> getAllCases() {
         return repository.findAll();
+    }
+
+    @Override
+    public ConflictCase getCaseById(Long id) {
+        return repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Case not found"));
     }
 }

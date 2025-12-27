@@ -7,11 +7,7 @@ public interface ConflictCaseService {
 
     ConflictCase createCase(ConflictCase conflictCase);
 
-    ConflictCase getCaseById(Long id);
-
     List<ConflictCase> getAllCases();
 
-    ConflictCase updateCaseStatus(Long id, String status);
-
-    List<ConflictCase> getCasesByPerson(Long personId);
+    ConflictCase getCaseById(Long id);
 }
