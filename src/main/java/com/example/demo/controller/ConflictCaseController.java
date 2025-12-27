@@ -8,41 +8,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/conflict-cases")
-@Tag(name = "Conflict Cases")
+@RequestMapping("/api/conflicts")
 public class ConflictCaseController {
 
-    private final ConflictCaseService service;
+    private final ConflictCaseService conflictCaseService;
 
-    public ConflictCaseController(ConflictCaseService service) {
-        this.service = service;
-    }
-
-    @PostMapping
-    public ConflictCase createCase(@RequestBody ConflictCase conflictCase) {
-        return service.createCase(conflictCase);
-    }
-
-    @PutMapping("/{id}/status")
-    public ConflictCase updateStatus(
-            @PathVariable Long id,
-            @RequestParam String status) {
-        return service.updateCaseStatus(id, status);
-    }
-
-    @GetMapping("/person/{personId}")
-    public List<ConflictCase> getCasesByPerson(
-            @PathVariable Long personId) {
-        return service.getCasesByPerson(personId);
-    }
-
-    @GetMapping("/{id}")
-    public ConflictCase getCaseById(@PathVariable Long id) {
-        return service.getCaseById(id);
-    }
-
-    @GetMapping
-    public List<ConflictCase> getAllCases() {
-        return service.getAllCases();
+    public ConflictCaseController(ConflictCaseService conflictCaseService) {
+        this.conflictCaseService = conflictCaseService;
     }
 }
