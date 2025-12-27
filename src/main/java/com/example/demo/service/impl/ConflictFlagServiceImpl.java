@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ConflictCaseServiceImpl implements ConflictCaseService {
+public class ConflictFlagServiceImpl implements ConflictCaseService {
 
     private final ConflictCaseRepository repository;
 
-    public ConflictCaseServiceImpl(ConflictCaseRepository repository) {
+    public ConflictFlagServiceImpl(ConflictCaseRepository repository) {
         this.repository = repository;
     }
 
