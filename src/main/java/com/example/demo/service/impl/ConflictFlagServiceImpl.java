@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service  // 🔥 VERY IMPORTANT
-public class ConflictCaseServiceImpl implements{
+@Service
+public class ConflictCaseServiceImpl implements ConflictCaseService {
 
     private final ConflictCaseRepository repository;
 
@@ -22,13 +22,26 @@ public class ConflictCaseServiceImpl implements{
     }
 
     @Override
-    public List<ConflictCase> getAllCases() {
-        return repository.findAll();
+    public ConflictCase updateCaseStatus(Long id, String status) {
+        ConflictCase conflictCase = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Case not found"));
+        conflictCase.setStatus(status);
+        return repository.save(conflictCase);
+    }
+
+    @Override
+    public List<ConflictCase> getCasesByPerson(Long personId) {
+        return repository.findByPersonId(personId);
     }
 
     @Override
     public ConflictCase getCaseById(Long id) {
         return repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Case not found"));
+    }
+
+    @Override
+    public List<ConflictCase> getAllCases() {
+        return repository.findAll();
     }
 }
