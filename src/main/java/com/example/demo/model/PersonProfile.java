@@ -10,10 +10,12 @@ public class PersonProfile {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false, unique = true)
+    private String referenceId;
+
     private String fullName;
     private String email;
     private LocalDateTime createdAt;
-
     private boolean relationshipDeclared;
 
     public PersonProfile() {
@@ -28,6 +30,14 @@ public class PersonProfile {
 
     public Long getId() {
         return id;
+    }
+
+    public String getReferenceId() {
+        return referenceId;
+    }
+
+    public void setReferenceId(String referenceId) {
+        this.referenceId = referenceId;
     }
 
     public String getFullName() {
